@@ -26,3 +26,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- vim: ts=2 sts=2 sw=2 et
+
+-- General app and buffer handling.
+vim.keymap.set('n', '<leader>w', ':w<CR>', { silent = true })
+vim.keymap.set('n', '<leader>q', ':q<CR>', { silent = true })
+vim.keymap.set('n', '<leader>aa', ':qall<CR>', { silent = true })
+vim.keymap.set('n', '<leader>d', ':bd<CR>', { silent = true })
