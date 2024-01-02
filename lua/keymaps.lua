@@ -32,3 +32,11 @@ vim.keymap.set('n', '<leader>w', ':w<CR>', { silent = true })
 vim.keymap.set('n', '<leader>q', ':q<CR>', { silent = true })
 vim.keymap.set('n', '<leader>aa', ':qall<CR>', { silent = true })
 vim.keymap.set('n', '<leader>d', ':bd<CR>', { silent = true })
+
+vim.keymap.set('n', '<leader>n', ':vs<CR>', { silent = true })
+
+-- Search.
+vim.keymap.set('n', '<leader><space>', ':noh<CR>', { noremap = true, silent = true })
+
+
+
