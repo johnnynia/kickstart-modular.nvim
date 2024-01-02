@@ -50,6 +50,24 @@ require('lazy').setup({
     },
   },
 
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = {
+      sort = {
+        sorter = "case_sensitive",
+      },
+      view = {
+        width = 30,
+      },
+      renderer = {
+        group_empty = true,
+      },
+      filters = {
+        dotfiles = true,
+      },
+    },
+  },
+
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
   {
