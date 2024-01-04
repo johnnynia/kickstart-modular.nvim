@@ -38,5 +38,6 @@ vim.keymap.set('n', '<leader>n', ':vs<CR>', { silent = true })
 -- Search.
 vim.keymap.set('n', '<leader><space>', ':noh<CR>', { noremap = true, silent = true })
 
-
-
+-- NeoTree.
+vim.keymap.set('n', '§', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>§', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
