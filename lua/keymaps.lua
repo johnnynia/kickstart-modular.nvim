@@ -41,3 +41,9 @@ vim.keymap.set('n', '<leader><space>', ':noh<CR>', { noremap = true, silent = tr
 -- NeoTree.
 vim.keymap.set('n', '§', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>§', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
+
+-- Swiss keyboard.
+vim.keymap.set('n', 'ü', '[', { silent = true })
+vim.keymap.set('n', 'ä', ']', { silent = true })
+vim.keymap.set('n', 'è', '{', { silent = true })
+vim.keymap.set('n', 'à', '}', { silent = true })
