@@ -150,9 +150,37 @@ require('lazy').setup({
     'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
+      require('onedark').setup {
+        style = 'cool',
+      }
+      require('onedark').load()
       vim.cmd.colorscheme 'onedark'
     end,
   },
+
+  --[[
+    normal:
+    black:   '0x080808'
+    red:     '0xf07178'
+    green:   '0xc2d94c'
+    yellow:  '0xff7733'
+    blue:    '0x59c2ff'
+    magenta: '0xf29718'
+    cyan:    '0x95e6cb'
+    white:   '0x878787'
+
+  # Bright colors
+  bright:
+    black:   '0x3a3a3a'
+    red:     '0xff6565'
+    green:   '0xeafe84'
+    yellow:  '0xfff779'
+    blue:    '0x68d5ff'
+    magenta: '0xffa3aa'
+    cyan:    '0xc7fffd'
+    white:   '0xdfdfdf'
+  ]]--
+
 
   {
     -- Set lualine as statusline
@@ -174,7 +202,12 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
-    opts = {},
+    opts = {
+      indent = {
+        char = "▏",
+        smart_indent_cap = true,
+      },
+    },
   },
 
   -- "gc" to comment visual regions/lines
@@ -202,6 +235,10 @@ require('lazy').setup({
   },
 
   {
+    'tpope/vim-rails'
+  },
+
+  {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
@@ -226,6 +263,25 @@ require('lazy').setup({
       { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
+  },
+
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+      })
+    end,
+  },
+
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function ()
+      require("copilot_cmp").setup()
+    end
   },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
